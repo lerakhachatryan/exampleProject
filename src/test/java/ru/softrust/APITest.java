@@ -10,12 +10,12 @@ import static org.hamcrest.CoreMatchers.is;
 public class APITest {
     @Test
     void checkTotal20() {
-        step("Открываем главную страницу", () -> {
+        step("Проверяем, что общее количесвто элементов равно 20", () -> {
         given()
                 .when()
                 .get("https://selenoid.autotests.cloud/status")
                 .then()
-                .body("total", is(22));
+                .body("total", is(20));
     });
     }
 
